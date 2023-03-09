@@ -1,0 +1,10 @@
+{% extends 'podstawa/main.html' %}
+{% block content %}
+<h1> Zarejestruj </h1>
+<form method="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input class= button type="Submit" value="Zarejestruj">
+</form>
+<p> Masz już konto? <a href="{% url 'login' %}"> Login </a></p>
+{% endblock  %}

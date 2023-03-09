@@ -1,0 +1,15 @@
+{% extends 'podstawa/main.html' %}
+{% block content %}
+<a class = wroc href="{% url 'zadania' %}">Wroc</a>
+<div class="nowe-zadanie">
+<h3 text align="center">Nowe zadanie</h3>
+</div>
+<form method="POST" action="">
+    {%csrf_token%}
+    {{form.as_p}}
+    <div class="przeslij">
+    <input class= button type="submit" name="Submit">
+</div>
+    </form>
+    
+{% endblock content %}

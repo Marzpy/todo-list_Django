@@ -1,0 +1,11 @@
+{% extends 'podstawa/main.html' %}
+{% block content %}
+
+<h1> Login </h1>
+<form method="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input  class= button type="Submit" value="Login">
+</form>
+<p> Czy chcesz utworzyć nowe konto? <a href="{% url 'zarejestruj' %} "> Zarejestruj </a></p>
+{% endblock content %}
